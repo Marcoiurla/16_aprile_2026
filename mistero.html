@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>16 Aprile 2026 🖤</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="warm-light"></div>
+<div id="loveCounter"></div>
+
+<div class="page">
+  <h2>Un giorno... Una piccolissima esperienza...</h2>
+  <img src="assets/mystery.jpg" class="clickable">
+
+  <p>
+    C’è un regalo che non si può incartare.<br>
+    Non profuma.<br>
+    Non pesa.<br>
+    Ma ti farà sorridere in un modo diverso.
+  </p>
+
+  <div class="clues">
+    <span>☀️ Ci sarà luce</span>
+    <span>🤫 Ci sarà silenzio</span>
+    <span>🖤 Ci saremo noi</span>
+  </div>
+
+  <button class="sunflower-btn" onclick="revealSunflowerGift()">
+    Ok… te lo dico 🌻
+  </button>
+
+  <div id="sunflowerReveal" class="hidden fade-block sunflower-card">
+    <img src="assets/girasolii.jpg" class="sunflower-big-image">
+
+    <p class="gift-text">
+      Il tuo regalo è una giornata insieme in un campo di girasoli 🌻<br><br>
+      Un posto pieno di luce,<br>
+      dove stare insieme con calma,<br>
+      ridere un po’, guardarci tanto,<br>
+      e portare a casa un ricordo bello davvero.
+    </p>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="quiz.html"><button>Indietro</button></a>
+    <a href="finale.html"><button>Avanti</button></a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div id="overlay" class="overlay" onclick="closePopup()">
+  <div class="popup-content" id="popupContent" onclick="event.stopPropagation()"></div>
+</div>
+
+</body>
+</html>

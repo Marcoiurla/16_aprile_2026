@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  margin: 0;
+  color: #2c3e50;
+  text-align: center;
+  overflow-x: hidden;
+  
+  /* SFONDO ANIMATO */
+  background: linear-gradient(-45deg, #dff6ff, #bde0fe, #cdb4db, #a2d2ff);
+  background-size: 400% 400%;
+  animation: gradientMove 100s ease forwards;
+}
+
+/* Animazione gradiente */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.page {
+  padding: 80px 20px;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Fade in elegante */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+h1, h2 {
+  margin-bottom: 30px;
+}
+
+/* BOTTONI AZZURRI */
+button {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  background: #4da3ff;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+  font-size: 1em;
+}
+
+button:hover {
+  background: #2f89e5;
+  transform: translateY(-2px);
+}
+
+/* Bottone Inizia Viaggio */
+.start-btn {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Navigazione */
+.nav-buttons {
+  margin-top: 50px;
+}
+
+.nav-buttons-mod {
+  margin-top: 80px;
+}
+
+.nav-buttons-start {
+  margin-top: 10px;
+}
+
+/* IMMAGINI */
+img.clickable {
+  width: 260px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+img.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CONTATORE */
+#loveCounter {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  font-size: 0.9em;
+  background: rgba(253, 162, 162, 0.6);
+  padding: 6px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+}
+
+/* QUIZ */
+.answer {
+  display: block;
+  margin: 8px auto;
+  width: 220px;
+}
+
+.correct {
+  background-color: #4CAF50 !important;
+}
+
+.wrong {
+  background-color: #e74c3c !important;
+}
+
+.clues span {
+  display: block;
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+/* LETTERA */
+#digitalLetter {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+  background: rgba(255,255,255,0.9);
+  padding: 25px;
+  border-radius: 16px;
+  display: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   LUCE CALDA - SEZIONE MISTERO
+=========================== */
+
+.warm-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at center, 
+    rgba(255, 210, 120, 0.35) 0%, 
+    rgba(255, 190, 80, 0.25) 30%, 
+    rgba(255, 170, 60, 0.15) 55%, 
+    transparent 75%);
+  opacity: 0;
+  animation: warmFade 3s ease forwards;
+}
+
+@keyframes warmFade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ===========================
+   CORIANDOLI
+=========================== */
+
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 14px;
+  background-color: #4da3ff;
+  top: -10px;
+  animation: fall linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
+
+
+.hidden {
+  display: none;
+}
+
+.fade-block {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.8s ease;
+}
+
+.fade-block.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ===========================
+   POPUP OVERLAY
+=========================== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+  z-index: 1000;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popupFade 0.4s ease forwards;
+}
+
+.overlay.show .popup-content {
+  transform: scale(1);
+}
+
+.popup-content img,
+.popup-content video {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+
+/* ===========================
+   TIMELINE A CUORE
+=========================== */
+
+/* Contenitore cuore */
+#heartTimeline {
+  position: relative;
+  width: 600px;
+  height: 550px;
+  margin: -40px auto;
+}
+
+/* SVG linee */
+#heartLines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Linea costellazione */
+.heart-line {
+  stroke: rgba(77, 163, 255, 0.437);
+  stroke-width: 3.5;
+  transition: stroke 0.6s ease;
+}
+
+/* Punto cuore */
+.heart-point {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background: #4da3ff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+/* Punto attivato */
+.heart-point.active {
+  background: #ffd166;
+  box-shadow: 0 0 18px rgba(255,209,102,0.8);
+}
+
+/* Micro testo sotto il punto */
+.heart-label {
+  position: absolute;
+  font-size: 0.75em;
+  opacity: 0.0;
+  transform: translate(-40%, 20px) scale(0.8);
+  white-space: nowrap;
+  transition: all 8.3s ease;
+}
+
+.heart-label.visible {
+  opacity: 1;
+  position: absolute;
+  font-size: 0.75em;
+  transform: translate(-50%, 20px) scale(1);
+}
+
+.heart-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4em;
+  opacity: 0;
+  transition: opacity 2.5s ease;
+  text-align: center;
+  pointer-events: none;
+}
+
+.heart-message.show {
+  opacity: 1;
+}
+
+
+.inline-photo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-left: 6px;
+  cursor: pointer;
+  transition: transform 1.0s ease;
+}
+
+.inline-photo img:hover {
+  transform: scale(1.2);
+}
+
+
+.sunflower-btn {
+  margin-top: 30px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8ecae6, #a2d2ff);
+  color: #1f3b57;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.sunflower-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.sunflower-card {
+  margin-top: 35px;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+.sunflower-big-image {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 24px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+  animation: softReveal 1s ease;
+}
+
+.gift-text {
+  margin-top: 24px;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: #2c3e50;
+}
+
+@keyframes softReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.hidden {
+  display: none;
+}
+
+.fade-block {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.9s ease;
+}
+
+.fade-block.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}

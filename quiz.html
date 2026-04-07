@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>16 Aprile 2026 🖤</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loveCounter"></div>
+
+<div class="page">
+
+  <!-- STEP 1: QUIZ -->
+  <div id="quizContainer">
+    <h2>Quanto mi conosci?</h2>
+    <p>(Se arrivi fino in fondo, sblocchi un regalo...)</p>
+    <p id="question"></p>
+    <div id="answers"></div>
+    <button onclick="nextQuestion()">Avanti</button>
+  </div>
+
+  <!-- STEP 2: CRUCIVERBA -->
+  <div id="crosswordSection" style="display:none;">
+    <h2>Quasi fatto ✍️</h2>
+    <p>
+      Però no... non è così facile.<br>
+      Prima devi superare ancora una piccola prova.
+    </p>
+
+    <p class="crossword-text">
+      Ti darò un cruciverba cartaceo su di noi.<br>
+      Quando lo avrai completato... potrai scoprire il regalo.
+    </p>
+
+    <button class="soft-btn" onclick="showGiftSection()">
+      Ho finito il cruciverba
+    </button>
+  </div>
+
+  <!-- STEP 3: REGALO -->
+  <div id="giftSection" style="display:none;">
+    <h2>Questo regalo era già tuo 🎁</h2>
+    <img src="assets/gift.png" class="clickable">
+    <h3>
+      E ha un profumo che mi ricorda di te...<br>
+      Guardami...
+    </h3>
+  </div>
+
+
+  <div class="nav-buttons">
+    <a href="amore.html"><button>Indietro</button></a>
+    <a href="mistero.html"><button>Avanti</button></a>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
