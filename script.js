@@ -2,7 +2,7 @@
    CONTATORE AMORE NERD
 =========================== */
 
-const startDate = new Date("2025-09-14T00:00:00"); // CAMBIA CON LA VOSTRA DATA
+const startDate = new Date("2025-09-14T23:00:00"); // CAMBIA CON LA VOSTRA DATA
 
 function updateCounter() {
   const now = new Date();
