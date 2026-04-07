@@ -307,26 +307,26 @@ function generateHeartTimeline() {
     { type: "video-muted", src: "assets/2020.mov", label: "Dove tutto ebbe inizio..." }, //1
     { type: "image", src: "assets/PRIMO_INCONTRO.jpg", label: "Primo incontro" }, //2
     { type: "video-muted", src: "assets/BALLETTO.mov", label: "19/09/25" }, //3
-    { type: "video", src: "assets/GIRASOLI.mov", label: "21/11/25" }, //4
-    { type: "video", src: "assets/GIRASOLI MARE.mov", label: "Insieme al mare" }, //5 
-    { type: "video", src: "assets/BOWLING.mov", label: "Imbarazzo per pallina" }, //6
-    { type: "video", src: "assets/ELEGANTI.mov", label: "Eleganti..." }, //7
+    { type: "video-muted", src: "assets/GIRASOLI.mov", label: "21/11/25" }, //4
+    { type: "video-muted", src: "assets/GIRASOLI MARE.mov", label: "Insieme al mare" }, //5 
+    { type: "video-muted", src: "assets/BOWLING.mov", label: "Imbarazzo per pallina" }, //6
+    { type: "video-muted", src: "assets/ELEGANTI.mov", label: "Eleganti..." }, //7
     { type: "image", src: "assets/MERCOLEDI.jpg", label: "WE" }, //8
-    { type: "video", src: "assets/IN VIAGGIO.mov", label: "Primo viaggio insieme" }, //9 
-    { type: "video", src: "assets/CAPRIOLA.mov", label: "Pallina si diverte" }, //10
-    { type: "video", src: "assets/FELICITA.mov", label: "Tu sei la mia felicità" }, //11
+    { type: "video-muted", src: "assets/IN VIAGGIO.mov", label: "Primo viaggio insieme" }, //9 
+    { type: "video-muted", src: "assets/CAPRIOLA.mov", label: "Pallina si diverte" }, //10
+    { type: "video-muted", src: "assets/FELICITA.mov", label: "Tu sei la mia felicità" }, //11
     { type: "video-muted", src: "assets/TORRE.mov", label: "Torre insieme" }, //12
-    { type: "video", src: "assets/UFFICIO.mov", label: "Studiando insieme" }, //13
+    { type: "video-muted", src: "assets/UFFICIO.mov", label: "Studiando insieme" }, //13
     { type: "image", src: "assets/AL BAR.jpg", label: "Angiolina Jolie" }, //14
     { type: "image", src: "assets/A CASA.jpg", label: "Pallina perde a carambola" }, //15
-    { type: "video", src: "assets/MOTO.mov", label: "Sulle moto come i bimbi" }, //16
-    { type: "video", src: "assets/TRECCE.mov", label: "Bimba WE" }, //17
+    { type: "video-muted", src: "assets/MOTO.mov", label: "Sulle moto come i bimbi" }, //16
+    { type: "video-muted", src: "assets/TRECCE.mov", label: "Bimba WE" }, //17
     { type: "image", src: "assets/F1.jpg", label: "Formula 1 insieme" }, //18
     { type: "image", src: "assets/DORMIRE.jpg", label: "Dormire insieme" }, //19
     { type: "image", src: "assets/SKIN.jpg", label: "Pallina ciotta fa la skin care" }, //20
-    { type: "video", src: "assets/MASCHERA.mp4", label: "Pallina e Fuffy con la maschera" }, //21
-    { type: "video", src: "assets/POLLETTO.mov", label: "Ma tu lo hai mai mangiato il polletto?" }, //22
-    { type: "video", src: "assets/PASQUETTA.mov", label: "Torre con la famiglia" }, //23
+    { type: "video-muted", src: "assets/MASCHERA.mp4", label: "Pallina e Fuffy con la maschera" }, //21
+    { type: "video-muted", src: "assets/POLLETTO.mov", label: "Ma tu lo hai mai mangiato il polletto?" }, //22
+    { type: "video-muted", src: "assets/PASQUETTA.mov", label: "Torre con la famiglia" }, //23
     // continua fino a 28 elementi
   ];
   const points = [];
