@@ -133,6 +133,7 @@ img.show {
   border-radius: 16px;
   display: none;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  white-space: pre-wrap;
 }
 
 /* ===========================
