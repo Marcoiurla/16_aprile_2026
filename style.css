@@ -412,3 +412,33 @@ img.show {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+.hero-photo {
+  width: min(80%, 320px);
+  border-radius: 20px;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-photo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+}
+
+.hero-photo {
+  animation: fadeInPhoto 1.2s ease;
+}
+
+@keyframes fadeInPhoto {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
