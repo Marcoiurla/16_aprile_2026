@@ -415,7 +415,7 @@ img.show {
 
 
 .hero-photo {
-  width: min(80%, 320px);
+  width: 80%;
   border-radius: 20px;
   margin: 30px auto;
   display: block;
